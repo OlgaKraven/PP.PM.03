@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "id": 101, "name": "Alpha", "value": 42, "tags": ["ml","timeseries"], "updatedAt": "2025-10-01T12:00:00Z", "image": "https://picsum.photos/id/1015/800/450", "series": [40,41,42,41,43,44,42,45] },
+    { "id": 102, "name": "Beta",  "value": 17, "tags": ["ui","ux"],       "updatedAt": "2025-10-02T10:05:00Z", "image": "https://picsum.photos/id/1025/800/450", "series": [12,14,13,15,16,18,17,19] },
+    { "id": 103, "name": "Gamma", "value": 73, "tags": ["api","perf"],    "updatedAt": "2025-10-03T09:30:00Z", "image": "https://picsum.photos/id/1035/800/450", "series": [66,67,69,70,71,73,72,74] },
+    { "id": 104, "name": "Delta", "value": 8,  "tags": ["a11y"],          "updatedAt": "2025-10-04T16:45:00Z", "image": "https://picsum.photos/id/1045/800/450", "series": [6,7,8,7,8,8,7,9] },
+    { "id": 105, "name": "Epsilon", "value": 55, "tags": ["charts","etl"],"updatedAt": "2025-10-05T11:10:00Z", "image": "https://picsum.photos/id/1055/800/450", "series": [50,51,52,53,54,55,56,57] }
+  ]
+}

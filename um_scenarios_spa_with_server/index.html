@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Умные сценарии — SPA</title>
+  <meta name="description" content="SPA-сервис умных сценариев: поиск, фильтры, визуализация и быстрый интерфейс.">
+  <link rel="preload" as="style" href="app.min.css">
+  <link rel="preload" as="script" href="app.min.js">
+  <link rel="stylesheet" href="app.min.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Интерактивный сервис «умных сценариев»</h1>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Поиск по имени или тегу…" aria-label="Поиск" />
+      <label class="range">
+        <span>Мин. значение</span>
+        <input id="minVal" type="range" min="0" max="100" value="0" />
+        <output id="minValOut">0</output>
+      </label>
+    </div>
+  </header>
+
+  <main id="app" class="container">
+    <div id="list" class="grid" aria-live="polite"></div>
+    <div id="empty" class="empty" hidden>Ничего не найдено. Измени фильтры или запрос.</div>
+  </main>
+
+  <footer class="app-footer">
+    <small>SPA + fetch + lazy + анимации • Демопроект для практики</small>
+  </footer>
+
+  <!-- Шаблон карточки -->
+  <template id="card-tpl">
+    <article class="card enter">
+      <div class="thumb-wrap">
+        <img class="thumb lozad" alt="" loading="lazy" />
+        <div class="skeleton"></div>
+      </div>
+      <div class="card-body">
+        <header>
+          <h3 class="title"></h3>
+          <span class="badge"></span>
+        </header>
+        <p class="tags"></p>
+        <div class="meta">
+          <time class="updated"></time>
+          <button class="fav" aria-pressed="false" title="Добавить в избранное">★</button>
+        </div>
+        <div class="sparkline-holder" data-series=""></div>
+      </div>
+    </article>
+  </template>
+
+  <div id="perf" class="perf">
+    <span>API: <b id="apiTime">–</b> ms</span>
+    <span>Render: <b id="renderTime">–</b> ms</span>
+    <span>Карточек: <b id="count">0</b></span>
+  </div>
+
+  <script src="app.min.js" defer></script>
+</body>
+</html>
